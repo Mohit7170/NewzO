@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ad1_native_adView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ad_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A808080">
+
+        <ImageView
+            android:id="@+id/ad1_imageView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:elevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ad1_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="This is Add Heading"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ad1_imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ad1_advitiser2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="This is Add Advitisor"
+            android:textColor="@color/gnt_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ad1_notification_view"
+            app:layout_constraintStart_toEndOf="@+id/ad1_notification_view"
+            app:layout_constraintTop_toBottomOf="@+id/ad1_heading" />
+
+        <ImageView
+            android:id="@+id/ad1_notification_view"
+            android:layout_width="@dimen/gnt_ad_indicator_width"
+            android:layout_height="@dimen/gnt_ad_indicator_height"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_ad_badge"
+            app:layout_constraintStart_toEndOf="@+id/ad1_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/ad1_heading" />
+
+        <RatingBar
+            android:id="@+id/ad1_starrating2"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:numStars="5"
+            android:stepSize="5"
+            app:layout_constraintBottom_toBottomOf="@+id/ad1_notification_view"
+            app:layout_constraintStart_toEndOf="@+id/ad1_advitiser2"
+            app:layout_constraintTop_toBottomOf="@+id/ad1_heading" />
+
+        <TextView
+            android:id="@+id/ad1_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="This is Ad body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ad1_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/ad1_starrating2" />
+
+        <Button
+            android:id="@+id/ad1_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ad1_imageView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.gms.ads.nativead.NativeAdView>
