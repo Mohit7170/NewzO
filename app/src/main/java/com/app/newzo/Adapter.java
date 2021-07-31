@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -29,15 +30,14 @@ public class Adapter extends RecyclerView.Adapter {
     static Context context;
     static Modals modals;
 
-    NativeAdView adView;
-
-    NativeAd nativeAd;
-
     View view;
 
-    public Adapter(List<Modals> data, Context context) {
+    private boolean shouldShowAdds;
+
+    public Adapter(List<Modals> data, Context context, boolean shouldShowAdds) {
         this.data = data;
         this.context = context;
+        this.shouldShowAdds = shouldShowAdds;
     }
 
     @NonNull
@@ -70,13 +70,34 @@ public class Adapter extends RecyclerView.Adapter {
     @Override
     public int getItemViewType(int position) {
 
-        if (position % 3 != 0 || position == 0 || position == 3) {
 
-            return 0;
 
-        } else {
+            if (position % 3 != 0 || position <= 3 ) {
+                //for News
+                return 0;
+
+            } else {
+                //for Ads
+                if(shouldShowAdds){
+                    return 1;
+
+                }else{
+                    return 0;
+                }
+
+            }
+
+        // 0 -> News
+        // 1 -> Adds
+
+
+/*
+
+        if(shouldShowAdds)
             return 1;
-        }
+        else return 0;
+*/
+
 
     }
 

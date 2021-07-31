@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
     private String countryCode;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         recyclerView = findViewById(R.id.recyclerView);
         data = new ArrayList<>();
@@ -39,14 +39,12 @@ public class MainActivity extends AppCompatActivity {
         TelephonyManager tm = (TelephonyManager) getSystemService(getApplicationContext().TELEPHONY_SERVICE);
         countryCode = tm.getNetworkCountryIso();
 
+        boolean shouldShowAdds = getIntent().getBooleanExtra("shouldShowAdds", true);
 
-        adapter = new Adapter(data, this);
-
+        adapter = new Adapter(data, MainActivity.this, shouldShowAdds);
         recyclerView.setAdapter(adapter);
 
         getNews();
-
-
     }
 
     private void getNews() {

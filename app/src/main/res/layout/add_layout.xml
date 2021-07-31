@@ -11,7 +11,7 @@
         android:id="@+id/ad_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#1A808080">
+        android:background="#F6F3F3">
 
         <ImageView
             android:id="@+id/ad1_imageView"
@@ -30,7 +30,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="2dp"
             android:text="This is Add Heading"
-            android:textColor="@color/black"
+            android:textColor="@color/black1"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ad1_imageView"

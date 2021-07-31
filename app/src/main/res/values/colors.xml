@@ -7,6 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#fdba2e</color>
+    <color name="black1">#131f28</color>
+
 
 
     <color name="gnt_test_background_color">#00F4F4F4</color>
