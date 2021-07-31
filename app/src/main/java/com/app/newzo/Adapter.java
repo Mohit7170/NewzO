@@ -93,9 +93,7 @@ public class Adapter extends RecyclerView.Adapter {
             ((ViewHolder) holder).desc.setText(modals.getDesc());
             ((ViewHolder) holder).source.setText(modals.getSource());
 
-            System.out.println("URL is " + modals.getUrl());
-
-            Picasso.get().load(modals.getUrl()).into(((ViewHolder) holder).img);
+            Picasso.get().load(modals.getImgUrl()).into(((ViewHolder) holder).img);
 
 
         } else if (getItemViewType(position) == 1) {

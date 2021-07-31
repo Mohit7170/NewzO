@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                                     allArticles.get(i).getDescription(),
                                     allArticles.get(i).getSource().getName(),
                                     allArticles.get(i).getPublishedAt().substring(0, 10),
+                                    allArticles.get(i).getUrl(),
                                     allArticles.get(i).getUrlToImage()
                             ));
                             adapter.notifyDataSetChanged();
